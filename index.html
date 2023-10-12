@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto-Resizing iFrame</title>
+</head>
+<body>
+    <iframe id="pdfIframe" src="Certificate_of_Analysis.pdf"></iframe>
+
+    <script>
+        function resizeIframe() {
+            var iframe = document.getElementById('pdfIframe');
+            if (iframe) {
+                var newHeight = window.innerHeight;
+                var newWidth = window.innerWidth; 
+                iframe.style.height = newHeight + 'px';
+                iframe.style.width = newWidth + 'px';
+            }
+        }
+        resizeIframe();
+        window.addEventListener('resize', resizeIframe);
+    </script>
+</body>
+</html>
